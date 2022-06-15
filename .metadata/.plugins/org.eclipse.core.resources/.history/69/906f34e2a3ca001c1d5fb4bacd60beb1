@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body style="background-color: green">
+	<div>
+		<ul>
+			<li>HTML5</li>
+		</ul>
+	</div>
+</body>
+</html>

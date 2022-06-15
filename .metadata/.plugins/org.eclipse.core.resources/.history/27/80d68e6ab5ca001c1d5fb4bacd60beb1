@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Index4</title>
+
+<style>
+	body {
+		margin: 0; padding: 0; font-family: "맑은 고딕";
+	}
+	ul, ol, li { list-style: none; margin: 0; padding: 0; }
+	
+	header {
+		width: 1100px; height: 100px; margin: 0 auto; background-color: gold;
+	}
+	
+	#silder {
+		width: 1100px; height: 450px; margin: 0 auto; background-color: #DA70D6;
+	}
+	
+	section {
+		width: 1100px; height: 280px; margin: 0 auto; background-color: #FFEBCD;
+	}
+	
+	footer {
+		width: 1100px; height: 100px; margin: 0 auto; background-color: #DA70D6;
+	}
+</style>
+</head>
+<body>
+	
+	<header></header>
+	
+	<div id="slider"></div>
+	
+	<section></section>
+	
+	<footer></footer>
+	
+</body>
+</html>
