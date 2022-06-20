@@ -2,18 +2,15 @@
 <!DOCTYPE log4j:configuration PUBLIC "-//APACHE//DTD LOG4J 1.2//EN" "log4j.dtd">
 <log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
 
-	<!-- Appenders -->
 	<Appenders>
-		<Console name="console" targer="SYSTEM_OUT">
+		<Console name = "console" target="SYSTEM_OUT">
 			<PatternLayout pattern="%-5p: %c - %m%n" />
 		</Console>
 	</Appenders>
 	
-	<!-- Application Loggers -->
-	<loggers>
-		<logger name="org.springframework" level="DEBUG" additivity="false">
+	<Loggers>
+		<Logger name="org.springframework" level="DEBUG" additivity="false">
 			<AppenderRef ref="console" />
-		</logger>
-	</loggers>
-	
+		</Logger>
+	</Loggers>
 </log4j:configuration>
