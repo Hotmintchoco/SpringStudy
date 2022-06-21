@@ -10,4 +10,5 @@
     <fullyQualifiedTypeName name="com.sun.org.slf4j.internal.LoggerFactory"/>
     <fullyQualifiedTypeName name="java.util.logging.Logger"/>
     <fullyQualifiedTypeName name="org.apache.logging.log4j.core.Logger"/>
+    <fullyQualifiedTypeName name="polymorphism.SonySpeaker"/>
 </qualifiedTypeNameHistroy>
