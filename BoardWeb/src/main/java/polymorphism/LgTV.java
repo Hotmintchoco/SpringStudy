@@ -1,16 +1,38 @@
 package polymorphism;
 
+import org.springframework.stereotype.Component;
+
+@Component("lg")
 public class LgTV implements TV{
+	private Speaker speaker;
+	private int price;
+	
+	public LgTV() {
+		System.out.println("lgTV ìƒì„±ì");
+	}
+	
+	public LgTV(Speaker speaker) {
+		System.out.println("===> lgTV(2) ê°ì²´ ìƒì„±");
+		this.speaker = speaker;
+	}
+	
+	public LgTV(Speaker speaker, int price) {
+		System.out.println("===> lgTV(3) ê°ì²´ ìƒì„±");
+		this.speaker = speaker;
+		this.price = price;
+	}
+	
 	public void powerOn() {
-		System.out.println("LgTV ---- Àü¿ø ÄÒ´Ù.");
+		System.out.print("lgTV ---- ì „ì› ì¼ ë‹¤.");
+		System.out.printf("ê°€ê²© : %d\n", price);
 	}
 	public void powerOff() {
-		System.out.println("LgTV ---- Àü¿ø ²ö´Ù.");
+		System.out.println("LgTV ---- ì „ì› ëˆë‹¤.");
 	}
 	public void volumeUp() {
-		System.out.println("LgTV ---- ¼Ò¸® ¿Ã¸°´Ù.");
+		speaker.volumeUp();
 	}
 	public void volumeDown() {
-		System.out.println("LgTV ---- ¼Ò¸® ³»¸°´Ù.");
+		speaker.volumeDown();
 	}
 }

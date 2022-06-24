@@ -1,22 +1,50 @@
 package polymorphism;
 
+import javax.annotation.Resource;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
+
+@Component("samsung")
 public class SamsungTV implements TV{
+//	@Autowired
+//	@Qualifier("apple")
+	@Resource(name="sony")
 	private Speaker speaker;
+	private int price;
 	
 	public SamsungTV() {
-		System.out.println("==> SamsungTV(1) °´Ã¼ »ı¼º");
+		System.out.println("===> SamsungTV(1) ê°ì²´ ìƒì„±");
 	}
 	
 	public SamsungTV(Speaker speaker) {
-		System.out.println("==> SamsungTV(2) °´Ã¼ »ı¼º");
+		System.out.println("===> SamsungTV(2) ê°ì²´ ìƒì„±");
+		this.speaker = speaker;
+	}
+	
+	public SamsungTV(Speaker speaker, int price) {
+		System.out.println("===> SamsungTV(3) ê°ì²´ ìƒì„±");
+		this.speaker = speaker;
+		this.price = price;
+	}
+	
+	public void setSpeaker(Speaker speaker) {
+		System.out.println("===> setSpeaker() í˜¸ì¶œ");
 		this.speaker = speaker;
 	}
 
+	public void setPrice(int price) {
+		System.out.println("===> setPrice() í˜¸ì¶œ");
+		this.price = price;
+	}
+
 	public void powerOn() {
-		System.out.println("SamsungTV ---- Àü¿ø ÄÒ´Ù.");
+		System.out.print("SamsungTV ---- ì „ì› ì¼ ë‹¤.");
+		System.out.printf("ê°€ê²© : %d\n", price);
 	}
 	public void powerOff() {
-		System.out.println("SamsungTV ---- Àü¿ø ²ö´Ù.");
+		System.out.println("SamsungTV ---- ì „ì› ëˆë‹¤.");
 	}
 	public void volumeUp() {
 		speaker.volumeUp();

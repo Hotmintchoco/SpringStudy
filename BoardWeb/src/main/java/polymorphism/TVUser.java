@@ -9,11 +9,13 @@ public class TVUser {
 		AbstractApplicationContext factory = 
 				new GenericXmlApplicationContext("applicationContext.xml");
 		
-		TV tv = (TV)factory.getBean("tv");
+		TV tv1 = factory.getBean("samsung", TV.class);
 		
-		tv.powerOn();
-		tv.powerOff();
-		tv.volumeUp();
-		tv.volumeDown();
+		tv1.powerOn();
+		tv1.powerOff();
+		tv1.volumeUp();
+		tv1.volumeDown();
+		
+		factory.close();
 	}
 }
