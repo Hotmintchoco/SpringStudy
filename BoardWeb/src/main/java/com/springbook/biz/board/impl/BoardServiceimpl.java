@@ -8,9 +8,9 @@ import org.springframework.stereotype.Service;
 import com.springbook.biz.board.BoardService;
 import com.springbook.biz.board.BoardVO;
 
-@Service("boardService")
+//@Service("boardService")
 public class BoardServiceimpl implements BoardService{
-	@Autowired
+//	@Autowired
 	private BoardDAOSpring boardDAO;
 	
 	
