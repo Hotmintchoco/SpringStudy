@@ -12,7 +12,7 @@ import org.springframework.stereotype.Repository;
 
 import com.springbook.biz.board.BoardVO;
 
-//@Repository
+@Repository
 public class BoardDAOSpring {
 	@Autowired
 	private JdbcTemplate jdbcTemplate;

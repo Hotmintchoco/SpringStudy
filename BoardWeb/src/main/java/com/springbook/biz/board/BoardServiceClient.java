@@ -14,16 +14,18 @@ public class BoardServiceClient {
 		BoardService boardService = (BoardService) container.getBean("boardService");
 		
 		BoardVO vo = new BoardVO();
-		vo.setSeq(100);
-		vo.setTitle("ÀÓ½Ã Á¦¸ñ");
-		vo.setWriter("È«±æµ¿");
-		vo.setContent("ÀÓ½Ã ³»¿ë........");
-//		boardService.insertBoard(vo);
+		vo.setTitle("ì„ì‹œ ì œëª©");
+		vo.setWriter("í™ê¸¸ë™");
+		vo.setContent("ì„ì‹œ ë‚´ìš©........");
+		//boardService.insertBoard(vo);
 		
-		List<BoardVO> boardList = boardService.getBoardList(vo);
-		for(BoardVO board : boardList) {
-			System.out.println("--->" + board);
-		}
+//		List<BoardVO> boardList = boardService.getBoardList(vo);
+//		for(BoardVO board : boardList) {
+//			System.out.println("--->" + board);
+//		}
+		
+		boardService.getBoardList(vo).
+		forEach(board -> System.out.println("--->" + board));
 		container.close();
-	}
+	}               
 }
