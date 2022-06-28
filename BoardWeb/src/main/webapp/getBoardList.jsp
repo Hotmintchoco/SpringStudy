@@ -1,12 +1,11 @@
 <%@page import="com.springbook.biz.board.impl.BoardDAO"%>
 <%@page import="com.springbook.biz.board.BoardVO"%>
 <%@page import="java.util.*" %>
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
+<%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="EUC-KR"%>
 <%
-	BoardVO vo = new BoardVO();
-	BoardDAO boardDAO = new BoardDAO();
-	List<BoardVO> boardList = boardDAO.getBoardList(vo);
+	List<BoardVO> boardList = (List) session.getAttribute("boardList");
+
 %>
 
 <!DOCTYPE html>
@@ -24,13 +23,13 @@
 <h3>테스트님 환영합니다... <a href="logout_proc.jsp">Log-out</a></h3>
 
 <div>
-<form action="getBoardList.jsp" method="post">
+<form action="getBoardList.do" method="post">
 	<table border="1" style="width: 700px;">
 		<tr>
 			<td align="right">
 				<select name="searchCondition">
-				<option value="TITLE">제목
-				<option value="CONTENT">내용
+				<option value="title">제목
+				<option value="content">내용
 				</select>
 				<input type="text" name="searchKeyword">
 				<input type="submit" value="검색">
