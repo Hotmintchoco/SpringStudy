@@ -20,13 +20,20 @@
     <fullyQualifiedTypeName name="org.springframework.stereotype.Repository"/>
     <fullyQualifiedTypeName name="org.aopalliance.intercept.Joinpoint"/>
     <fullyQualifiedTypeName name="java.lang.Object"/>
-    <fullyQualifiedTypeName name="java.lang.String"/>
     <fullyQualifiedTypeName name="org.aspectj.lang.annotation.AfterReturning"/>
     <fullyQualifiedTypeName name="org.aspectj.lang.JoinPoint"/>
-    <fullyQualifiedTypeName name="com.springbook.biz.user.UserVO"/>
     <fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
     <fullyQualifiedTypeName name="org.aspectj.lang.annotation.Aspect"/>
     <fullyQualifiedTypeName name="org.aspectj.lang.annotation.Pointcut"/>
     <fullyQualifiedTypeName name="org.aspectj.lang.annotation.Around"/>
     <fullyQualifiedTypeName name="lombok.Data"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="com.springbook.biz.user.impl.UserDAO"/>
+    <fullyQualifiedTypeName name="com.springbook.biz.user.UserVO"/>
+    <fullyQualifiedTypeName name="javax.servlet.RequestDispatcher"/>
+    <fullyQualifiedTypeName name="com.springbook.biz.board.impl.BoardDAO"/>
+    <fullyQualifiedTypeName name="com.sun.tools.javac.util.List"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="com.springbook.biz.board.BoardVO"/>
+    <fullyQualifiedTypeName name="javax.servlet.http.HttpSession"/>
 </qualifiedTypeNameHistroy>

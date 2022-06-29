@@ -3,12 +3,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%
-	String seq = request.getParameter("seq");
-	BoardVO vo = new BoardVO();
-	vo.setSeq(Integer.parseInt(seq));
-	
-	BoardDAO boardDAO = new BoardDAO();
-	BoardVO board = boardDAO.getBoard(vo);
+	BoardVO board = (BoardVO) session.getAttribute("board");
 %>
 <!DOCTYPE html>
 <html>
@@ -27,7 +22,7 @@
 	<a href="logout_proc.jsp">Log-out</a>
 </div>
 <hr>
-<form action="updateBoard.proc.jsp" method="post">
+<form action="updateBoard.do" method="post">
 <input type="hidden" name="seq" value="<%= board.getSeq() %>">
 	<table border="1">
 		<tr>
@@ -61,8 +56,8 @@
 <hr>
 <div>
 	<a href="insertBoard.jsp">글등록</a>&nbsp;&nbsp;&nbsp;
-	<a href="deleteBoard_proc.jsp?seq=<%= board.getSeq()%>">글삭제</a>&nbsp;&nbsp;&nbsp;
-	<a href="getBoardList.jsp">글목록</a>
+	<a href="deleteBoard.do?seq=<%= board.getSeq()%>">글삭제</a>&nbsp;&nbsp;&nbsp;
+	<a href="getBoardList.do">글목록</a>
 </div>
 </body>
 </html>

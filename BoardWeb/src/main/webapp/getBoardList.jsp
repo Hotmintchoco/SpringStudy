@@ -49,7 +49,7 @@
 	<% for(BoardVO board : boardList) { %>
 	<tr>
 		<td><%= board.getSeq() %></td>
-		<td><a href="getBoard.jsp?seq=<%= board.getSeq() %>">
+		<td><a href="getBoard.do?seq=<%= board.getSeq() %>">
 		<%= board.getTitle() %></a></td>
 		<td><%= board.getWriter() %></td>
 		<td><%= board.getRegDate() %></td>

@@ -17,7 +17,7 @@
 	<a href="logout_proc.jsp">Log-out</a>
 </div>
 <hr>
-<form action="insertBoard.proc.jsp" method="post">
+<form action="insertBoard.do" method="post">
 	<table border="1">
 		<tr>
 			<td bgcolor="orange" width="70">제목</td>
