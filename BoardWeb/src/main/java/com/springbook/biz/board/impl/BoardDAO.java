@@ -62,19 +62,19 @@ public class BoardDAO {
 	}
 	
 	// 글 삭제
-	public void deleteBoard(BoardVO vo) {
-		System.out.println("===> JDBC로 deleteBoard() 기능 처리");
-		try {
-			conn = JDBCUtil.getConnection();
-			stmt = conn.prepareStatement(BOARD_DELETE);
-			stmt.setInt(1, vo.getSeq());
-			stmt.executeUpdate();
-		} catch (Exception e) {
-			e.printStackTrace();
-		} finally {
-			JDBCUtil.close(stmt, conn);
-		}
-	}
+	 public void deleteBoard(BoardVO vo) {
+	      System.out.println("===> JDBC로 deleteBoard() 기능  처리");
+	      try {
+	         conn = JDBCUtil.getConnection();
+	         stmt = conn.prepareStatement(BOARD_DELETE);
+	         stmt.setInt(1, vo.getSeq());
+	         stmt.executeUpdate();
+	      }catch(Exception e) {
+	         e.printStackTrace();
+	      }finally {
+	         JDBCUtil.close(stmt, conn);
+	      }
+	 }
 	
 	// 글 상세 조회
 	public BoardVO getBoard(BoardVO vo) {
