@@ -1,0 +1,37 @@
+@charset "UTF-8";
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 8px 12px;
+   
+}
+
+.navbar_logo {
+    font-size: 40px;
+    font-weight: bold;
+    color: #309AFD ;
+}
+
+.navbar_logo i{
+    color: skyblue;
+    display:inline;
+}
+
+.navbar_menu {
+    display: flex;
+    list-style: none;
+    color : #212121;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.navbar_menu li {
+    padding: 12px 20px; 
+     
+}
+
+.navbar>ul>li:hover {
+background-color: skyblue;
+border-radius: 4px;}
